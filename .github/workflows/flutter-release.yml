@@ -48,6 +48,13 @@ jobs:
           storeFile=../app/release.jks
           EOF
 
+      - name: Create .env file
+        run: |
+          echo "BASE_URL=${{ secrets.BASE_URL }}" > .env
+          echo "BASE_URL_STAGING=${{ secrets.BASE_URL_STAGING }}" >> .env
+          echo "BASE_URL_PROD=${{ secrets.BASE_URL_PROD }}" >> .env
+          echo "APP_ENV=dev" >> .env
+
       - name: Install Dependencies
         run: flutter pub get
 
