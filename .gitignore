@@ -17,7 +17,6 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
-.env
 
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
@@ -46,7 +45,10 @@ app.*.map.json
 
 # FVM Version Cache
 .fvm/
+
 branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
 .gitignore
+config.bat
+node_modules
